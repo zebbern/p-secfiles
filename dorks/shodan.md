@@ -13,104 +13,102 @@
 
 ---
 
-## More in detail
-
-<kbd>Finding Exposed Admin Panels</kbd>
+### Finding Exposed Admin Panels
 ```shodan
 http.title:"admin" OR http.title:"login" OR http.html:"admin" hostname:"example.com"
 ```
 
-<kbd>Detecting Open Elasticsearch Instances</kbd>
+### Detecting Open Elasticsearch Instances
 ```shodan
 product:"ElasticSearch" port:9200 hostname:"example.com"
 ```
 
-<kbd>Exposed Databases (MongoDB)</kbd>
+### Exposed Databases (MongoDB)
 ```shodan
 product:"MongoDB" port:27017 hostname:"example.com"
 ```
 
-<kbd>Exposed MySQL Databases</kbd>
+### Exposed MySQL Databases
 ```shodan
 product:"MySQL" port:3306 hostname:"example.com"
 ```
 
-<kbd>Searching for Open FTP Servers</kbd>
+### Searching for Open FTP Servers
 ```shodan
 port:21 anonymous user:yes hostname:"example.com"
 ```
 
-<kbd>Open RDP Sessions</kbd>
+### Open RDP Sessions
 ```shodan
 port:3389 has_screenshot:true hostname:"example.com"
 ```
 
-<kbd>Finding Exposed WordPress Sites</kbd>
+### Finding Exposed WordPress Sites
 ```shodan
 http.title:"WordPress" OR http.html:"wp-content" hostname:"example.com"
 ```
 
-<kbd>Unprotected Jenkins Servers</kbd>
+### Unprotected Jenkins Servers
 ```shodan
 http.title:"Dashboard [Jenkins]" hostname:"example.com"
 ```
 
-<kbd>Open SMB Shares</kbd>
+### Open SMB Shares
 ```shodan
 port:445 os:"Windows" hostname:"example.com"
 ```
 
-<kbd>Publicly Accessible Cameras</kbd>
+### Publicly Accessible Cameras
 ```shodan
 port:554 has_screenshot:true hostname:"example.com"
 ```
 
-<kbd>Open Redis Instances</kbd>
+### Open Redis Instances
 ```shodan
 product:"Redis" port:6379 hostname:"example.com"
 ```
 
-<kbd>Exposed Git Repositories</kbd>
+### Exposed Git Repositories
 ```shodan
 http.html:"/.git" OR http.html:"Index of /.git" hostname:"example.com"
 ```
 
-<kbd>Publicly Accessible API Endpoints</kbd>
+### Publicly Accessible API Endpoints
 ```shodan
 http.html:"api" OR http.title:"API" hostname:"example.com"
 ```
 
-<kbd>Publicly Indexed Log Files</kbd>
+### Publicly Indexed Log Files
 ```shodan
 http.html:"log file" OR http.title:"log" hostname:"example.com"
 ```
 
-<kbd>Exposed phpMyAdmin Panels</kbd>
+### Exposed phpMyAdmin Panels
 ```shodan
 http.title:"phpMyAdmin" hostname:"example.com"
 ```
 
-<kbd>Misconfigured AWS S3 Buckets</kbd>
+### Misconfigured AWS S3 Buckets
 ```shodan
 http.html:"ListBucketResult" OR http.title:"Index of /" hostname:"example.com"
 ```
 
-<kbd>Open Kubernetes Dashboards</kbd>
+### Open Kubernetes Dashboards
 ```shodan
 http.title:"Kubernetes Dashboard" hostname:"example.com"
 ```
 
-<kbd>Default Tomcat Manager Login Pages</kbd>
+### Default Tomcat Manager Login Pages
 ```shodan
 http.html:"Tomcat Manager Application" OR http.title:"Apache Tomcat" hostname:"example.com"
 ```
 
-<kbd>Vulnerable VPN Gateways</kbd>
+### Vulnerable VPN Gateways
 ```shodan
 http.title:"Pulse Secure" OR http.title:"Fortinet SSL VPN" hostname:"example.com"
 ```
 
-<kbd>Identifying Exposed Docker APIs</kbd>
+### Identifying Exposed Docker APIs
 ```shodan
 product:"Docker" port:2375 hostname:"example.com"
 ```
